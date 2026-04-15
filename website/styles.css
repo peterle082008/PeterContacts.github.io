@@ -1,0 +1,236 @@
+body, html {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 400;
+  line-height: 1.25em;
+  letter-spacing: 0.025em;
+  color: #333;
+  background: #F7F7F7;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 12rem);
+  transform: translate(-50%, -50%);
+}
+
+.pic {
+  width: 4rem;
+  height: 4rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+
+.contact {
+  position: relative;
+  margin-bottom: 1rem;
+  padding-left: 5rem;
+  height: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact .pic {
+  position: absolute;
+  left: 0;
+}
+
+.contact .name {
+  font-weight: 500;
+  margin-bottom: 0.125rem;
+}
+
+.contact .message,
+.contact .seen {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.contact .badge {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  padding-top: 0.125rem;
+  border-radius: 1rem;
+  top: 0;
+  left: 2.5rem;
+  background: #333;
+  color: white;
+}
+
+/* CONTACTS PANEL */
+.contacts {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-6rem, -50%);
+  width: 24rem;
+  height: 32rem;
+  padding: 1rem 2rem 1rem 1rem;
+  box-sizing: border-box;
+  border-radius: 1rem 0 0 1rem;
+  cursor: pointer;
+  background: white;
+  box-shadow: 0 0 8rem rgba(0,0,0,0.1), 2rem 2rem 4rem -3rem rgba(0,0,0,0.5);
+  transition: transform 500ms;
+}
+
+.contacts h2 {
+  margin: 0.5rem 0 1.5rem 5rem;
+}
+
+.contacts .fa-bars {
+  position: absolute;
+  left: 2.25rem;
+  color: #999;
+  transition: color 200ms;
+}
+
+.contacts .fa-bars:hover {
+  color: #666;
+}
+
+.contacts .contact:last-child {
+  margin: 0;
+}
+
+.contacts:hover {
+  transform: translate(-23rem, -50%);
+}
+
+/* CHAT */
+.chat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24rem;
+  height: 38rem;
+  z-index: 2;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  background: white;
+  box-shadow: 0 0 8rem rgba(0,0,0,0.1), 0 2rem 4rem -3rem rgba(0,0,0,0.5);
+}
+
+.chat .contact.bar {
+  margin: 1rem;
+}
+
+/* MESSAGES */
+.messages {
+  padding: 1rem;
+  background: #F7F7F7;
+  overflow-y: auto;
+  flex-grow: 1;
+  box-shadow: inset 0 2rem 2rem -2rem rgba(0,0,0,0.05),
+              inset 0 -2rem 2rem -2rem rgba(0,0,0,0.05);
+}
+
+.messages .time {
+  font-size: 0.8rem;
+  background: #EEE;
+  padding: 0.25rem 1rem;
+  border-radius: 2rem;
+  color: #999;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.messages .message {
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  background: #FFF;
+  border-radius: 1.125rem 1.125rem 1.125rem 0;
+  max-width: 66%;
+  box-shadow: 0 0 2rem rgba(0,0,0,0.075),
+              0 1rem 1rem -1rem rgba(0,0,0,0.1);
+}
+
+.messages .message.parker {
+  margin-left: auto;
+  border-radius: 1.125rem 1.125rem 0 1.125rem;
+  background: #333;
+  color: white;
+}
+
+/* TYPING DOTS */
+.typing {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: #ccc;
+  border-radius: 50%;
+}
+
+.typing-1 { animation: typing 3s infinite; }
+.typing-2 { animation: typing 3s 0.25s infinite; }
+.typing-3 { animation: typing 3s 0.5s infinite; }
+
+/* INPUT */
+.input {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem 0 1.5rem;
+  height: 4rem;
+}
+
+.input i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 200ms;
+}
+
+.input i:hover {
+  color: #333;
+}
+
+.input input {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1.125rem;
+  flex-grow: 1;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.1),
+              0 1rem 1rem -1rem rgba(0,0,0,0.2);
+}
+
+
+@keyframes typing {
+  0%, 75%, 100% {
+    transform: translateY(0.25rem) scale(0.9);
+    opacity: 0.5;
+  }
+  25% {
+    transform: translateY(-0.25rem) scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* PROFILBILDER */
+.pic.mark {
+  background-image: url(https://cdn.discordapp.com/attachments/1458828004531638398/1493898050345631864/IMG_1888.jpg?ex=69e0a47a&is=69df52fa&hm=b8f6ee54c5a6260932ff8c08452888b69ac30ca9925968361665aafd9caef8af&);
+}
+
+.pic.ryan {
+  background-image: url(https://cdn.discordapp.com/attachments/1458828004531638398/1487073631921246268/IMG_3776.jpg?ex=69cdbf7e&is=69cc6dfe&hm=4e390da4c88e55ce3b2ce84364d6f1905e6859fab06845cb41d5d6bf2414fed6&);
+}
+
+.pic.ali {
+  background-image: url(https://cdn.discordapp.com/attachments/1458828004531638398/1493899206438686831/IMG_1911.jpg?ex=69e0a58e&is=69df540e&hm=5e09956d1cbd720bff1729a7766251a581816341c9f4d45131e9190bbf09b818&);
+}
+
+.pic.hugo {
+  background-image: url(https://cdn.discordapp.com/attachments/1458828004531638398/1493899206149144617/IMG_1913.png?ex=69e0a58e&is=69df540e&hm=192811d84996ec7531abd1bb05c69b41ba6be7953de578c29e7c2175a9aeb475&);
+}
+
+.pic.gym {
+  background-image: url(https://yt3.googleusercontent.com/PX2Z7zYCmm8uVMG2dgkGuFckZnDoA66wq3143wXK9j3T92wfDWPjRH0ZrbtFoV6p4c6mZ-WJhZQ=s900-c-k-c0x00ffffff-no-rj);
+}
